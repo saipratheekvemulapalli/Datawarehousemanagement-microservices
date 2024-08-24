@@ -1,0 +1,36 @@
+.table{
+
+    margin:30px;
+
+}
+
+ 
+
+.container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: auto;
+
+    background-color: #f0f0f0;
+
+}
+
+
+
+
+.table th, .table td {
+    border: 1px solid #ccc; /* Add borders to table headers and cells */
+    padding: 8px; /* Add padding inside table cells */
+    text-align: left; /* Align text to the left */
+}
+
+.table th {
+    background-color: #f2f2f2; /* Add a background color to table headers */
+}

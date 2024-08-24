@@ -1,0 +1,212 @@
+
+
+
+ <!-- <div class="col-md-4 offset-mid-3" >
+
+    <h3>Add Product</h3>
+
+    <form [formGroup]="productForm" (ngSubmit) = "onSubmit()"  >
+
+   
+
+        <div class="form-group">
+
+            <label> Product Name</label>
+
+            <input type="text" class="form-control" id="productName" formControlName="productName"
+
+            [(ngModel)]="product.productName" name="productName">
+
+            <div *ngIf="productForm.get('productName')?.hasError('required') && productForm.get('productName')?.touched" class="text-danger">
+
+                Product Name is Required.
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label> Product Price</label>
+
+            <input type="text" class="form-control" id="price" formControlName="price"
+
+            [(ngModel)]="product.price" name="price">
+
+            <div *ngIf="productForm.get('price')?.hasError('required') && productForm.get('price')?.touched" class="text-danger">
+
+                Product Price is required.
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label> Product Description</label>
+
+            <input type="text" class="form-control" id="specification" formControlName="specification"
+
+            [(ngModel)]="product.specification" name="specification">
+
+            <div *ngIf="productForm.get('specification')?.hasError('required') && productForm.get('specification')?.touched" class="text-danger">
+
+                Product Description is required.
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label> Product Quantity</label>
+
+            <input type="text" class="form-control" id="quantity" formControlName="quantity"
+
+            [(ngModel)]="product.quantity" name="quantity">
+
+            <div *ngIf="productForm.get('quantity')?.hasError('required') && productForm.get('quantity')?.touched" class="text-danger">
+
+                Product Quantity is required.
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label> Product Category</label>
+
+            <input type="text" class="form-control" id="category" formControlName="category"
+
+            [(ngModel)]="product.category" name="category">
+
+            <div *ngIf="productForm.get('category')?.hasError('required') && productForm.get('category')?.touched" class="text-danger">
+
+                Product Description is required.
+
+            </div>
+
+        </div>
+
+ 
+
+        <button class="btn btn-success" type="submit"  >Submit</button>&nbsp;&nbsp;&nbsp;
+
+        <button class="btn btn-success" (click)=navigateBack()  >Back</button>
+
+    </form>
+
+    </div> -->
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-md-4 addForm add-function card-body text-center">
+
+            <div class="text-center form-control-add-question">
+
+              <h3 class="text-center">Add Product</h3>
+
+              <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+                <div class="form-group small-text-box mx-auto">
+
+                  <label for="productName">Product Name</label>
+
+                  <input type="text" class="form-control" id="productName" [(ngModel)]="product.productName" name="productName" formControlName="productName">
+
+                  <div *ngIf="productForm.get('productName')?.hasError('required') && productForm.get('productName')?.touched" class="text-danger">
+
+                    Product Name is required.
+
+                  </div>
+
+                </div>
+
+                <div class="form-group small-text-box mx-auto">
+
+                  <label for="price">Product Price</label>
+
+                  <input type="text" class="form-control" id="price" [(ngModel)]="product.price" name="price" formControlName="price">
+
+                  <div *ngIf="productForm.get('price')?.hasError('required') && productForm.get('price')?.touched" class="text-danger">
+
+                    Product Price is required.
+
+                  </div>
+
+                </div>
+
+                <div class="form-group small-text-box mx-auto">
+
+                  <label for="specification">Product Description</label>
+
+                  <input type="text" class="form-control" id="specification" [(ngModel)]="product.specification" name="specification" formControlName="specification">
+
+                  <div *ngIf="productForm.get('specification')?.hasError('required') && productForm.get('specification')?.touched" class="text-danger">
+
+                    Product Description is required.
+
+                  </div>
+
+                </div>
+
+                <div class="form-group small-text-box mx-auto">
+
+                  <label for="quantity">Product Quantity</label>
+
+                  <input type="text" class="form-control" id="quantity" [(ngModel)]="product.quantity" name="quantity" formControlName="quantity">
+
+                  <div *ngIf="productForm.get('quantity')?.hasError('required') && productForm.get('quantity')?.touched" class="text-danger">
+
+                    Product Quantity is required.
+
+                  </div>
+
+                </div>
+
+                <div class="form-group small-text-box mx-auto">
+
+                  <!-- <label for="category">Product Category</label>
+
+                  <input type="text" class="form-control" id="category" [(ngModel)]="product.category" name="category" formControlName="category">
+
+                  <div *ngIf="productForm.get('category')?.hasError('required') && productForm.get('category')?.touched" class="text-danger">
+
+                    Product Category is required.
+
+                  </div> -->
+                  <label for="category">Product Category</label>
+                  
+                  <select class="form-control" id="category" [(ngModel)]="product.category" name="category" formControlName="category">
+                    <option value="" disabled>Select a category</option>
+                    <option *ngFor="let category of categories" [value]="category.catName">{{ category.catName }}</option>
+                  
+                  </select>
+                  <div *ngIf="productForm.get('category')?.hasError('required') && productForm.get('category')?.touched" class="text-danger">
+
+                    Product Category is required.
+
+                  </div>
+
+                </div>
+
+                <div class="text-center">
+
+                  <button class="btn btn-success" type="submit">Submit</button> &nbsp;&nbsp;
+
+                  <button class="btn btn-success" (click)="navigateBack()">Back</button>
+
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>

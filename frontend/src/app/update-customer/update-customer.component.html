@@ -1,0 +1,84 @@
+<div class="col-md-4 offset-mid-3">
+
+    <h4>Update Customer</h4>
+
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+
+            <label> Customer First Name</label>
+
+            <input type="text" class="form-control" id="firstName" formControlName="firstName"
+
+                [(ngModel)]="customer.firstName" name="firstName">
+
+            <div *ngIf="customerForm.get('firstName')?.hasError('required') && customerForm.get('firstName')?.touched"
+
+                class="text-danger">
+
+                Customer First Name is Required.
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label> Customer Last Name</label>
+
+            <input type="text" class="form-control" id="lastName" formControlName="lastName"
+
+                [(ngModel)]="customer.lastName" name="lastName">
+
+            <div *ngIf="customerForm.get('lastName')?.hasError('required') && customerForm.get('lastName')?.touched"
+
+                class="text-danger">
+
+                Customer Last Name is Required.
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label> Customer Mobile Number</label>
+
+            <input type="text" class="form-control" id="mobileNo" formControlName="mobileNo"
+
+                [(ngModel)]="customer.mobileNo" name="mobileNo">
+
+            <div *ngIf="customerForm.get('mobileNo')?.hasError('required') && customerForm.get('mobileNo')?.touched"
+
+                class="text-danger">
+
+                Customer Mobile Number is Required.
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label> Customer E-mail</label>
+
+            <input type="text" class="form-control" id="email" formControlName="email"
+
+                [(ngModel)]="customer.email" name="email">
+
+            <div *ngIf="customerForm.get('email')?.hasError('required') && customerForm.get('email')?.touched"
+
+                class="text-danger">
+
+                Customer E-mail is Required.
+
+            </div>
+
+        </div>
+
+        <button class="btn btn-success" type="submit">Submit</button>
+
+    </form>
+
+    </div>
+

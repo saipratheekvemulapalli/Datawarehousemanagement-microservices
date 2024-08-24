@@ -1,0 +1,71 @@
+
+
+
+<!-- <h2>Category List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>categoryId</th>
+            <th>categoryName</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let category of categories">
+            <td>{{category.catId}}</td>
+            <td>{{category.catName}}</td>
+            <td>
+                <button style='margin-left:5px' (click)="updateCategory(category.catId)" class="btn btn-warning">Update</button>
+                <button (click) = "deleteCategory(category.catId)" class = "btn btn-danger" style="margin-left: 5px"> Delete</button>
+                <button (click) = "categoryDetails(category.catId)" class = "btn btn-info" style="margin-left: 5px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+    
+</table> -->
+
+<div class="container">
+
+  <h2>Category List</h2>
+  
+  <table class="table table-striped">
+  
+      <thead>
+  
+          <tr>
+  
+              <th>Category Id</th>
+  
+              <th>Category Name</th>
+  
+              <th>Actions</th>
+  
+          </tr>
+  
+      </thead>
+  
+      <tbody>
+  
+          <tr *ngFor ="let category of categories">
+  
+              <td>{{category.catId}}</td>
+  
+              <td>{{category.catName}}</td>
+  
+              <td>
+  
+                  <button style='margin-left:5px' (click)="updateCategory(category.catId)" class="btn btn-warning">Update</button>
+  
+                  <button (click) = "deleteCategory(category.catId)" class = "btn btn-danger" style="margin-left: 5px"> Delete</button>
+  
+                  <button (click) = "categoryDetails(category)" class = "btn btn-info" style="margin-left: 5px"> View</button>
+  
+              </td>
+  
+          </tr>
+  
+      </tbody>  
+  
+  </table>
+  
+  </div>

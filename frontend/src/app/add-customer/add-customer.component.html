@@ -1,0 +1,172 @@
+<!-- <div class="col-md-4 offset-mid-3">
+
+    <h3>Add Customer</h3>
+
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+
+            <label> Customer First Name</label>
+
+            <input type="text" class="form-control" id="firstName" formControlName="firstName"
+
+                [(ngModel)]="customer.firstName" name="firstName">
+
+            <div *ngIf="customerForm.get('firstName')?.hasError('required') && customerForm.get('firstName')?.touched"
+
+                class="text-danger">
+
+                Customer First Name is Required.
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label> Customer Last Name</label>
+
+            <input type="text" class="form-control" id="lastName" formControlName="lastName"
+
+                [(ngModel)]="customer.lastName" name="lastName">
+
+            <div *ngIf="customerForm.get('lastName')?.hasError('required') && customerForm.get('lastName')?.touched"
+
+                class="text-danger">
+
+                Customer Last Name is Required.
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label> Customer Mobile Number</label>
+
+            <input type="text" class="form-control" id="mobileNo" formControlName="mobileNo"
+
+                [(ngModel)]="customer.mobileNo" name="mobileNo">
+
+            <div *ngIf="customerForm.get('mobileNo')?.hasError('required') && customerForm.get('mobileNo')?.touched"
+
+                class="text-danger">
+
+                Customer Mobile Number is Required.
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label> Customer E-mail</label>
+
+            <input type="text" class="form-control" id="email" formControlName="email"
+
+                [(ngModel)]="customer.email" name="email">
+
+            <div *ngIf="customerForm.get('email')?.hasError('required') && customerForm.get('email')?.touched"
+
+                class="text-danger">
+
+                Customer E-mail is Required.
+
+            </div>
+
+        </div>
+
+        <button class="btn btn-success" type="submit">Submit</button>&nbsp;&nbsp;&nbsp;
+
+        <button class="btn btn-success" (click)=navigateBack()>Back</button>
+
+    </form>
+
+</div> -->
+
+
+<div class="container">
+
+    <div class="row justify-content-center">
+
+      <div class="col-md-4 addForm add-function card-body text-center">
+
+        <div class="text-center form-control-add-question">
+
+          <h3 class="text-center">Add Customer</h3>
+
+          <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group small-text-box mx-auto">
+
+              <label for="firstName">Customer First Name</label>
+
+              <input type="text" class="form-control" id="firstName" [(ngModel)]="customer.firstName" name="firstName" formControlName="firstName">
+
+              <div *ngIf="customerForm.get('firstName')?.hasError('required') && customerForm.get('firstName')?.touched" class="text-danger">
+
+                Customer First Name is required.
+
+              </div>
+
+            </div>
+
+            <div class="form-group small-text-box mx-auto">
+
+              <label for="lastName">Customer Last Name</label>
+
+              <input type="text" class="form-control" id="lastName" [(ngModel)]="customer.lastName" name="lastName" formControlName="lastName">
+
+              <div *ngIf="customerForm.get('lastName')?.hasError('required') && customerForm.get('lastName')?.touched" class="text-danger">
+
+                Customer Last Name is required.
+
+              </div>
+
+            </div>
+
+            <div class="form-group small-text-box mx-auto">
+
+              <label for="mobileNo">Customer Mobile Number</label>
+
+              <input type="text" class="form-control" id="mobileNo" [(ngModel)]="customer.mobileNo" name="mobileNo" formControlName="mobileNo">
+
+              <div *ngIf="customerForm.get('mobileNo')?.hasError('required') && customerForm.get('mobileNo')?.touched" class="text-danger">
+
+                Customer Mobile Number is required.
+
+              </div>
+
+            </div>
+
+            <div class="form-group small-text-box mx-auto">
+
+              <label for="email">Customer E-mail</label>
+
+              <input type="text" class="form-control" id="email" [(ngModel)]="customer.email" name="email" formControlName="email">
+
+              <div *ngIf="customerForm.get('email')?.hasError('required') && customerForm.get('email')?.touched" class="text-danger">
+
+                Customer E-mail is required.
+
+              </div>
+
+            </div>
+
+            <div class="text-center">
+
+              <button class="btn btn-success" type="submit">Submit</button>
+
+              <button class="btn btn-success" (click)="navigateBack()">Back</button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>

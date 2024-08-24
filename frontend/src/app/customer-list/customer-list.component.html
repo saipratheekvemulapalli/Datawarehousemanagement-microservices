@@ -1,0 +1,150 @@
+<!-- <h2>Customer List</h2>
+
+<table class="table table-striped">
+
+    <thead>
+
+        <tr>
+
+            <th>Customer Id</th>
+
+            <th>Customer First Name</th>
+
+            <th>Customer Last Name</th>
+
+            <th>Mobile Number</th>
+
+            <th>E-mail</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let customer of customers">
+
+            <td>{{customer.customerId}}</td>
+
+            <td>{{customer.firstName}}</td>
+
+            <td>{{customer.lastName}}</td>
+
+            <td>{{customer.mobileNo}}</td>
+
+            <td>{{customer.email}}</td>
+
+            <td>
+
+ 
+
+                <button (click)="customerDetails(customer.customerId)" class="btn btn-info"
+
+                    style="margin-left: 5px">View</button>
+
+ 
+
+                <button style='margin-left:5px' (click)="updateCustomer(customer.customerId)"
+
+                    class="btn btn-warning">Update</button>
+
+ 
+
+                <button (click)="deleteCustomer(customer.customerId)" class="btn btn-danger"
+
+                    style="margin-left: 5px">Delete</button>
+
+ 
+
+            </td>
+
+ 
+
+        </tr>
+
+ 
+
+    </tbody>
+
+ 
+
+</table> -->
+
+
+<div class="container">
+
+    <h2>Customer List</h2>
+
+<table class="table table-striped">
+
+    <thead>
+
+        <tr>
+
+            <th>Customer Id</th>
+
+            <th>Customer First Name</th>
+
+            <th>Customer Last Name</th>
+
+            <th>Mobile Number</th>
+
+            <th>E-mail</th>
+
+            <th>Actions</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let customer of customers">
+
+            <td>{{customer.customerId}}</td>
+
+            <td>{{customer.firstName}}</td>
+
+            <td>{{customer.lastName}}</td>
+
+            <td>{{customer.mobileNo}}</td>
+
+            <td>{{customer.email}}</td>
+
+            <td>
+
+ 
+
+                <button (click)="customerDetails(customer.customerId)" class="btn btn-info"
+
+                    style="margin-left: 5px">View</button>
+
+ 
+
+                <button style='margin-left:5px' (click)="updateCustomer(customer.customerId)"
+
+                    class="btn btn-warning">Update</button>
+
+ 
+
+                <button (click)="deleteCustomer(customer.customerId)" class="btn btn-danger"
+
+                    style="margin-left: 5px">Delete</button>
+
+ 
+
+            </td>
+
+ 
+
+        </tr>
+
+ 
+
+    </tbody>
+
+ 
+
+</table>
+
+</div>

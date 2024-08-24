@@ -1,0 +1,62 @@
+<!-- <div class="col-md-4 offset-mid-3 addForm">
+<h3>Add Category</h3>
+<form [formGroup]="loginForm" (ngSubmit) = "onSubmit()">
+
+    
+    <div class="form-group">
+        
+        <input type="text" class="form-control" id="catName" 
+        [(ngModel)]="category.catName" name="catName" formControlName="catName">
+        <label> Category Name</label>
+        <div *ngIf="loginForm.get('catName')?.hasError('required') && loginForm.get('catName')?.touched" class="text-danger">
+            Customer Name is required.
+          </div>
+          <div *ngIf="loginForm.get('catName')?.hasError('maxlength') && loginForm.get('catName')?.touched" class="text-danger">
+            Max length of Customer Id is 20
+          </div>
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+</form>
+</div> -->
+
+<div class="container">
+
+  <div class="row justify-content-center">
+
+    <div class="col-md-4 addForm add-function card-body text-center">
+
+      <div class="text-center form-control-add-question">
+
+        <h3 class="text-center">Add Category</h3>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-group small-text-box mx-auto">
+
+            <label for="catName">Category Name</label>
+
+            <input type="text" class="form-control" id="catName" [(ngModel)]="category.catName" name="catName" formControlName="catName">
+
+            <div *ngIf="loginForm.get('catName')?.hasError('required') && loginForm.get('catName')?.touched" class="text-danger">
+
+              Category Name is required.
+
+            </div>
+
+          </div>
+
+          <div class="text-center">
+
+            <button class="btn btn-success" type="submit">Submit</button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
